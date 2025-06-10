@@ -9,7 +9,7 @@ st.set_page_config(page_title="Gas vs HDD Dashboard", layout="wide")
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("gas.csv", dtype=str)
+    df = pd.read_csv("gas/gas.csv", dtype=str)
     df["Date"] = pd.to_datetime(df["Date"], dayfirst=True)
     df["Year"] = df["Year"].astype(str)
     df["Month"] = df["Month"].astype(str)
